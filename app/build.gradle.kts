@@ -12,6 +12,8 @@ android {
     namespace = "com.vladiyak.deliveryapp"
     compileSdk = 33
 
+
+
     defaultConfig {
         applicationId = "com.vladiyak.deliveryapp"
         minSdk = 24
@@ -20,6 +22,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
@@ -59,8 +62,10 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
 
     //Dagger hilt
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-compiler:2.44")
+    implementation("com.google.dagger:hilt-android:2.46")
+    kapt("com.google.dagger:hilt-compiler:2.46")
+
 
 
 }
+
