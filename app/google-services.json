@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "918613119680",
+    "project_id": "deliveryapp-46be2",
+    "storage_bucket": "deliveryapp-46be2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918613119680:android:b57e54c6a63da6970dd325",
+        "android_client_info": {
+          "package_name": "com.vladiyak.deliveryapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk_rH6F-JRGQ1eTujPOM5bYWetVZgRcaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
