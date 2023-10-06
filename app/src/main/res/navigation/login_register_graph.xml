@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/introductionFragment"
-        android:name="com.vladiyak.deliveryapp.fragments.IntroductionFragment"
+        android:name="com.vladiyak.deliveryapp.fragments.login.IntroductionFragment"
         android:label="fragment_introduction"
         tools:layout="@layout/fragment_introduction" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.vladiyak.deliveryapp.fragments.SignUpFragment"
+        android:name="com.vladiyak.deliveryapp.fragments.login.SignUpFragment"
         android:label="SignUpFragment"
         tools:layout="@layout/fragment_sign_up">
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.vladiyak.deliveryapp.fragments.LoginFragment"
+        android:name="com.vladiyak.deliveryapp.fragments.login.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login">
         <action

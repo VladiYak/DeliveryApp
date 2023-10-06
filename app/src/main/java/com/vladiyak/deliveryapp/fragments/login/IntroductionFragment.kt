@@ -1,4 +1,4 @@
-package com.vladiyak.deliveryapp.fragments
+package com.vladiyak.deliveryapp.fragments.login
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,7 +13,6 @@ import com.vladiyak.deliveryapp.MainActivity
 import com.vladiyak.deliveryapp.R
 import com.vladiyak.deliveryapp.databinding.FragmentIntroductionBinding
 import com.vladiyak.deliveryapp.viewmodel.IntroductionViewModel
-import com.vladiyak.deliveryapp.viewmodel.IntroductionViewModel.Companion.ACCOUNT_OPTIONS_FRAGMENT
 import com.vladiyak.deliveryapp.viewmodel.IntroductionViewModel.Companion.SHOPPING_ACTIVITY
 import dagger.hilt.android.AndroidEntryPoint
 

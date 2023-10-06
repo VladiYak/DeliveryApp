@@ -1,4 +1,4 @@
-package com.vladiyak.deliveryapp.fragments
+package com.vladiyak.deliveryapp.fragments.login
 
 import android.content.Intent
 import android.os.Bundle
