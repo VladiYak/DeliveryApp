@@ -14,7 +14,7 @@
             android:id="@+id/action_menuFragment_to_specialsFragment"
             app:destination="@id/specialsFragment" />
         <action
-            android:id="@+id/action_menuFragment_to_productDetailsFragment3"
+            android:id="@+id/action_menuFragment_to_productDetailsFragment"
             app:destination="@id/productDetailsFragment" />
     </fragment>
     <fragment

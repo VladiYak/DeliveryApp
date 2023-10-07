@@ -23,7 +23,7 @@ import com.vladiyak.deliveryapp.data.CartProduct
 import com.vladiyak.deliveryapp.databinding.FragmentProductDetailsBinding
 import com.vladiyak.deliveryapp.utils.Resource
 import com.vladiyak.deliveryapp.utils.hideBottomNavigationView
-import com.vladiyak.deliveryapp.viewmodel.DetailsViewModel
+import com.vladiyak.deliveryapp.viewmodel.ProductDetailsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 
@@ -38,7 +38,7 @@ class ProductDetailsFragment : Fragment() {
     private val args by navArgs<ProductDetailsFragmentArgs>()
     private lateinit var binding: FragmentProductDetailsBinding
     private val viewPagerImageAdapter by lazy { ViewPagerImageAdapter() }
-    private val viewModel by viewModels<DetailsViewModel>()
+    private val viewModel by viewModels<ProductDetailsViewModel>()
     private var isItemAddedToCart = false
 
     override fun onCreateView(

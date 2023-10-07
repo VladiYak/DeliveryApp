@@ -7,10 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
-import androidx.navigation.fragment.findNavController
 import com.google.android.material.tabs.TabLayoutMediator
 import com.noctambulist.foody.fragments.categories.BurgerCategoryFragment
-import com.noctambulist.foody.fragments.categories.FoodyCategoryFragment
 import com.noctambulist.foody.fragments.categories.FriesCategoryFragment
 import com.noctambulist.foody.fragments.categories.PastaCategoryFragment
 import com.noctambulist.foody.fragments.categories.PizzaCategoryFragment
@@ -18,7 +16,7 @@ import com.vladiyak.deliveryapp.R
 import com.vladiyak.deliveryapp.adapters.MenuViewPagerAdapter
 import com.vladiyak.deliveryapp.data.Product
 import com.vladiyak.deliveryapp.databinding.FragmentMenuBinding
-import dagger.hilt.android.AndroidEntryPoint
+import com.vladiyak.deliveryapp.fragments.categories.MainCategoryFragment
 
 class MenuFragment : Fragment(R.layout.fragment_menu) {
 
@@ -41,7 +39,7 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
 //        }
 
         val categoriesFragment = arrayListOf<Fragment>(
-            FoodyCategoryFragment(),
+            MainCategoryFragment(),
             BurgerCategoryFragment(),
             PizzaCategoryFragment(),
             FriesCategoryFragment(),

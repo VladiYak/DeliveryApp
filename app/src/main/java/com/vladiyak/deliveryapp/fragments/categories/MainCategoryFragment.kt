@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.airbnb.lottie.LottieAnimationView
@@ -23,7 +24,7 @@ import com.vladiyak.deliveryapp.databinding.FragmentFoodyCategoryBinding
 import com.vladiyak.deliveryapp.utils.ItemDecorationVertical
 import com.vladiyak.deliveryapp.utils.Resource
 import com.vladiyak.deliveryapp.utils.showBottomNavigationView
-import com.vladiyak.deliveryapp.viewmodel.FoodyCategoryViewModel
+import com.vladiyak.deliveryapp.viewmodel.MainCategoryViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 
@@ -36,7 +37,7 @@ class MainCategoryFragment : Fragment(R.layout.fragment_foody_category) {
     private lateinit var specialProductAdapter: SpecialProductsAdapter
     private lateinit var spicyOfferAdapter: SpicyOfferAdapter
     private lateinit var popularNowAdapter: PopularNowAdapter
-    private val viewModel by viewModels<FoodyCategoryViewModel>()
+    private val viewModel by viewModels<MainCategoryViewModel>()
     private lateinit var lottieLoading: LottieAnimationView
 
     override fun onCreateView(
@@ -57,20 +58,20 @@ class MainCategoryFragment : Fragment(R.layout.fragment_foody_category) {
         lottieLoading = binding.lottieLoading
         lottieLoading.visibility = View.GONE
 
-//        specialProductAdapter.onClick = {
-//            val b = Bundle().apply { putParcelable("product", it) }
-//            findNavController().navigate(R.id.action_homeFragment_to_productDetailsFragment, b)
-//        }
-//
-//        spicyOfferAdapter.onClick = {
-//            val b = Bundle().apply { putParcelable("product", it) }
-//            findNavController().navigate(R.id.action_homeFragment_to_productDetailsFragment, b)
-//        }
-//
-//        popularNowAdapter.onClick = {
-//            val b = Bundle().apply { putParcelable("product", it) }
-//            findNavController().navigate(R.id.action_homeFragment_to_productDetailsFragment, b)
-//        }
+        specialProductAdapter.onClick = {
+            val b = Bundle().apply { putParcelable("product", it) }
+            findNavController().navigate(R.id.action_menuFragment_to_productDetailsFragment, b)
+        }
+
+        spicyOfferAdapter.onClick = {
+            val b = Bundle().apply { putParcelable("product", it) }
+            findNavController().navigate(R.id.action_menuFragment_to_productDetailsFragment, b)
+        }
+
+        popularNowAdapter.onClick = {
+            val b = Bundle().apply { putParcelable("product", it) }
+            findNavController().navigate(R.id.action_menuFragment_to_productDetailsFragment, b)
+        }
 
         lifecycleScope.launchWhenStarted {
             viewModel.specialProduct.collectLatest {
