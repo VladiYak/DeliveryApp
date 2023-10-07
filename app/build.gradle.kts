@@ -62,6 +62,12 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
     implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
     implementation("com.google.firebase:firebase-firestore-ktx:24.8.1")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+
+
+    //Lottie
+    val lottieVersion = "6.0.1"
+    implementation("com.airbnb.android:lottie:$lottieVersion")
 
 
     //Dagger hilt
