@@ -761,4 +761,7 @@
     <dimen name="_98ssp">98.00sp</dimen>
     <dimen name="_99ssp">99.00sp</dimen>
     <dimen name="_9ssp">9.00sp</dimen>
+    <dimen name="medium">16dp</dimen>
+    <dimen name="small">8dp</dimen>
+    <dimen name="xsmall">4dp</dimen>
 </resources>

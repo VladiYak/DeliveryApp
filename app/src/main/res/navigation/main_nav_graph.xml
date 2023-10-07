@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_menuFragment_to_specialsFragment"
             app:destination="@id/specialsFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_productDetailsFragment3"
+            app:destination="@id/productDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/specialsFragment"
@@ -46,4 +49,16 @@
         android:name="com.vladiyak.deliveryapp.fragments.CartFragment"
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.vladiyak.deliveryapp.fragments.ProductDetailsFragment"
+        android:label="fragment_product_details"
+        tools:layout="@layout/fragment_product_details" >
+        <action
+            android:id="@+id/action_productDetailsFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <argument
+            android:name="product"
+            app:argType="com.vladiyak.deliveryapp.data.Product" />
+    </fragment>
 </navigation>
