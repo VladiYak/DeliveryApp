@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.tabs.TabLayoutMediator
 import com.noctambulist.foody.fragments.categories.BurgerCategoryFragment
 import com.noctambulist.foody.fragments.categories.FriesCategoryFragment
@@ -34,9 +35,9 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        binding.searchView.setOnClickListener {
-//            findNavController().navigate(R.id.action_homeFragment_to_searchFragment)
-//        }
+        binding.searchView.setOnClickListener {
+            findNavController().navigate(R.id.action_menuFragment_to_searchFragment)
+        }
 
         val categoriesFragment = arrayListOf<Fragment>(
             MainCategoryFragment(),
