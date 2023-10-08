@@ -77,14 +77,14 @@ class CartFragment : Fragment(R.layout.fragment_cart) {
             findNavController().navigateUp()
         }
 
-//        binding.btnCheckout.setOnClickListener {
-//            val action = CartFragmentDirections.actionCartFragmentToBillingFragment(
-//                totalPrice,
-//                cartAdapter.differ.currentList.toTypedArray(),
-//                true
-//            )
-//            findNavController().navigate(action)
-//        }
+        binding.btnCheckout.setOnClickListener {
+            val action = CartFragmentDirections.actionCartFragmentToBillingFragment(
+                totalPrice,
+                cartAdapter.differ.currentList.toTypedArray(),
+                true
+            )
+            findNavController().navigate(action)
+        }
 
 
         lifecycleScope.launchWhenStarted {

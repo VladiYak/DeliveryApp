@@ -51,7 +51,18 @@
         tools:layout="@layout/fragment_cart" >
         <action
             android:id="@+id/action_cartFragment_to_productDetailsFragment"
-            app:destination="@id/productDetailsFragment" />
+            app:destination="@id/productDetailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_cartFragment_to_billingFragment"
+            app:destination="@id/billingFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/productDetailsFragment"
@@ -65,4 +76,45 @@
             android:name="product"
             app:argType="com.vladiyak.deliveryapp.data.Product" />
     </fragment>
+    <fragment
+        android:id="@+id/billingFragment"
+        android:name="com.vladiyak.deliveryapp.fragments.BillingFragment"
+        android:label="BillingFragment" >
+        <argument
+            android:name="totalPrice"
+            app:argType="float" />
+        <argument
+            android:name="products"
+            app:argType="com.vladiyak.deliveryapp.data.CartProduct[]" />
+        <argument
+            android:name="payment"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_billingFragment_to_addressFragment"
+            app:destination="@id/addressFragment" />
+        <action
+            android:id="@+id/action_billingFragment_to_greetingsFragment"
+            app:destination="@id/greetingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="com.vladiyak.deliveryapp.fragments.AddressFragment"
+        android:label="fragment_address"
+        tools:layout="@layout/fragment_address" >
+        <argument
+            android:name="address"
+            app:argType="com.vladiyak.deliveryapp.data.Address"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/greetingsFragment"
+        android:name="com.vladiyak.deliveryapp.fragments.GreetingsFragment"
+        android:label="fragment_greetings"
+        tools:layout="@layout/fragment_greetings" >
+        <action
+            android:id="@+id/action_greetingsFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+
 </navigation>

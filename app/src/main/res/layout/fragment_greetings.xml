@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.GreetingsFragment">
+
+    <TextView
+        android:id="@+id/tvCongrats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_130sdp"
+        android:fontFamily="@font/sf_pro_display"
+        android:gravity="center"
+        android:text="Congrats!\nYour Order Placed"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/_22ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieCongrats"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_50sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCongrats"
+        app:lottie_rawRes="@raw/congrats" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieCongratsBg"
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="@dimen/_215sdp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCongrats"
+        app:lottie_rawRes="@raw/congrats_bg" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonGoHome"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:background="@drawable/green_button"
+        android:padding="@dimen/_10sdp"
+        android:text="Go Home"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lottieCongratsBg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
