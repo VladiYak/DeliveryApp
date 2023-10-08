@@ -41,15 +41,15 @@ open class BaseCategoryFragment : Fragment(R.layout.fragment_base_category) {
 
         lottieLoading = binding.lottieLoading
 
-//        popularNowAdapter.onClick = {
-//            val b = Bundle().apply { putParcelable("product", it) }
-//            findNavController().navigate(R.id.action_homeFragment_to_productDetailsFragment, b)
-//        }
-//
-//        specialProductsAdapter.onClick = {
-//            val b = Bundle().apply { putParcelable("product", it) }
-//            findNavController().navigate(R.id.action_homeFragment_to_productDetailsFragment, b)
-//        }
+        popularNowAdapter.onClick = {
+            val b = Bundle().apply { putParcelable("product", it) }
+            findNavController().navigate(R.id.action_menuFragment_to_productDetailsFragment, b)
+        }
+
+        specialProductsAdapter.onClick = {
+            val b = Bundle().apply { putParcelable("product", it) }
+            findNavController().navigate(R.id.action_menuFragment_to_productDetailsFragment, b)
+        }
 
         binding.rvSpacialOffer.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {

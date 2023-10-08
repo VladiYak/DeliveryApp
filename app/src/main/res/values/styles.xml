@@ -23,4 +23,11 @@
 
     </style>
 
+    <style name="MediumTextViewThin">
+
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="fontFamily">@font/sf_pro_display</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>

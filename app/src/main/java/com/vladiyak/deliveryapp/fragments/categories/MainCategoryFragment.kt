@@ -20,7 +20,7 @@ import com.vladiyak.deliveryapp.R
 import com.vladiyak.deliveryapp.adapters.PopularNowAdapter
 import com.vladiyak.deliveryapp.adapters.SpecialProductsAdapter
 import com.vladiyak.deliveryapp.adapters.SpicyOfferAdapter
-import com.vladiyak.deliveryapp.databinding.FragmentFoodyCategoryBinding
+import com.vladiyak.deliveryapp.databinding.FragmentMainCategoryBinding
 import com.vladiyak.deliveryapp.utils.ItemDecorationVertical
 import com.vladiyak.deliveryapp.utils.Resource
 import com.vladiyak.deliveryapp.utils.showBottomNavigationView
@@ -31,9 +31,9 @@ import kotlinx.coroutines.flow.collectLatest
 private val TAG = "MainCategoryFragment"
 
 @AndroidEntryPoint
-class MainCategoryFragment : Fragment(R.layout.fragment_foody_category) {
+class MainCategoryFragment : Fragment(R.layout.fragment_main_category) {
 
-    private lateinit var binding: FragmentFoodyCategoryBinding
+    private lateinit var binding: FragmentMainCategoryBinding
     private lateinit var specialProductAdapter: SpecialProductsAdapter
     private lateinit var spicyOfferAdapter: SpicyOfferAdapter
     private lateinit var popularNowAdapter: PopularNowAdapter
@@ -44,7 +44,7 @@ class MainCategoryFragment : Fragment(R.layout.fragment_foody_category) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentFoodyCategoryBinding.inflate(inflater)
+        binding = FragmentMainCategoryBinding.inflate(inflater)
         return binding.root
     }
 

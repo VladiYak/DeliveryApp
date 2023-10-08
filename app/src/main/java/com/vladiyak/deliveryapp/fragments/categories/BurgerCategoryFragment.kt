@@ -42,7 +42,7 @@ class BurgerCategoryFragment : BaseCategoryFragment() {
                     is Resource.Error -> {
                         Snackbar.make(requireView(), it.message.toString(), Snackbar.LENGTH_LONG)
                             .show()
-
+                        hidePopularNowLoading()
                     }
 
                     else -> Unit

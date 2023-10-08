@@ -47,6 +47,9 @@
         <action
             android:id="@+id/action_orderHistoryFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_orderHistoryFragment_to_orderDetailsFragment"
+            app:destination="@id/orderDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/cartFragment"
@@ -132,6 +135,15 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.vladiyak.deliveryapp.fragments.OrderDetailsFragment"
+        android:label="OrderDetailsFragment"
+        tools:layout="@layout/fragment_order_details">
+        <argument
+            android:name="order"
+            app:argType="com.vladiyak.deliveryapp.data.Order" />
     </fragment>
 
 </navigation>
