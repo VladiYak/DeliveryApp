@@ -91,7 +91,7 @@ class SearchFragment : Fragment() {
         binding.edSearch.addTextChangedListener { query ->
             val queryTrim = query.toString().trim()
             if (queryTrim.isNotEmpty()) {
-                val searchQuery = query.toString().substring(0, 1).toUpperCase()
+                val searchQuery = query.toString().substring(0, 1)
                     .plus(query.toString().substring(1))
                 job?.cancel()
                 job = CoroutineScope(Dispatchers.IO).launch {
