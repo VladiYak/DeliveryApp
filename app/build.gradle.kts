@@ -63,6 +63,7 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
     implementation("com.google.firebase:firebase-firestore-ktx:24.8.1")
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation("de.hdodenhof:circleimageview:3.1.0")
 
 
     //Lottie
