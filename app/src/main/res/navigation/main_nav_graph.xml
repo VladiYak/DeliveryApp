@@ -48,7 +48,11 @@
         android:id="@+id/cartFragment"
         android:name="com.vladiyak.deliveryapp.fragments.CartFragment"
         android:label="fragment_cart"
-        tools:layout="@layout/fragment_cart" />
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/productDetailsFragment"
         android:name="com.vladiyak.deliveryapp.fragments.ProductDetailsFragment"

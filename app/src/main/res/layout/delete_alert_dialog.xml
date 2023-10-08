@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_100sdp">
+
+    <TextView
+        android:id="@+id/tv_delete_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nexa_regular"
+        android:text="Confirmation"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_delete_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Are you sure you want to delete this item from cart?"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_8ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_delete_item"
+        app:layout_constraintTop_toBottomOf="@id/tv_delete_item" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tv_delete_message"
+        app:layout_constraintStart_toStartOf="@+id/tv_delete_message"
+        app:layout_constraintTop_toBottomOf="@id/tv_delete_message">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@color/accent"
+            android:text="No"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/tv_delete_message"
+            app:layout_constraintTop_toBottomOf="@id/tv_delete_message" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@color/text_color"
+            android:text="Yes"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/tv_delete_message"
+            app:layout_constraintTop_toBottomOf="@id/tv_delete_message" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
