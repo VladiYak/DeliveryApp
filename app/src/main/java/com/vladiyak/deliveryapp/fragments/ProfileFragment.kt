@@ -46,21 +46,21 @@ class ProfileFragment : Fragment() {
             showShareDialog()
         }
 
-//        binding.needHelpLayout.setOnClickListener {
-//            findNavController().navigate(R.id.action_profileFragment_to_helpFragment)
-//        }
+        binding.needHelpLayout.setOnClickListener {
+            findNavController().navigate(R.id.action_profileFragment_to_helpFragment)
+        }
 //
-//        binding.constraintProfile.setOnClickListener {
-//            findNavController().navigate(R.id.action_profileFragment_to_userAccountFragment)
-//        }
+        binding.constraintProfile.setOnClickListener {
+            findNavController().navigate(R.id.action_profileFragment_to_userAccountFragment)
+        }
 //
 //        binding.linearAllOrders.setOnClickListener {
 //            findNavController().navigate(R.id.action_profileFragment_to_allOrdersFragment)
 //        }
 //
-//        binding.linearAbout.setOnClickListener {
-//            findNavController().navigate(R.id.action_profileFragment_to_aboutFragment)
-//        }
+        binding.linearAbout.setOnClickListener {
+            findNavController().navigate(R.id.action_profileFragment_to_aboutFragment)
+        }
 
         lifecycleScope.launchWhenStarted {
             viewModel.user.collectLatest {

@@ -38,6 +38,15 @@
         <action
             android:id="@+id/action_profileFragment_to_menuFragment"
             app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_userAccountFragment"
+            app:destination="@id/userAccountFragment" />
     </fragment>
     <fragment
         android:id="@+id/orderHistoryFragment"
@@ -145,5 +154,20 @@
             android:name="order"
             app:argType="com.vladiyak.deliveryapp.data.Order" />
     </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.vladiyak.deliveryapp.fragments.HelpFragment"
+        android:label="HelpFragment"
+        tools:layout="@layout/fragment_help"/>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.vladiyak.deliveryapp.fragments.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/userAccountFragment"
+        android:name="com.vladiyak.deliveryapp.fragments.UserAccountFragment"
+        android:label="UserAccountFragment"
+        tools:layout="@layout/fragment_user_account"/>
 
 </navigation>

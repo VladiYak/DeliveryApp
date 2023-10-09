@@ -71,7 +71,7 @@ class FirebaseCommon(
         .orderBy("name")
         .startAt(searchQuery)
         .endAt("\u03A9+$searchQuery")
-        .limit(5)
+        .limit(1)
         .get()
 
     enum class QuantityChanging {
