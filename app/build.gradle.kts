@@ -66,6 +66,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation("com.shuhart.stepview:stepview:1.5.1")
+    implementation("androidx.core:core-splashscreen:1.0.1")
 
 
     //Lottie

@@ -33,6 +33,7 @@ class IntroductionFragment: Fragment(R.layout.fragment_introduction) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        
 
         lifecycleScope.launchWhenStarted {
             viewModel.navigate.collect {
