@@ -67,6 +67,7 @@ dependencies {
     implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation("com.shuhart.stepview:stepview:1.5.1")
     implementation("androidx.core:core-splashscreen:1.0.1")
+    implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
 
 
     //Lottie
