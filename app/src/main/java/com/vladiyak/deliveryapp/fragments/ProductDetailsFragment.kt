@@ -100,7 +100,7 @@ class ProductDetailsFragment : Fragment() {
 
                     is Resource.Success -> {
                         binding.buttonAddToCart
-                        Toast.makeText(requireContext(), "Foody added", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(requireContext(), "Food added", Toast.LENGTH_SHORT).show()
                         updateButtonAppearance()
                     }
 
@@ -155,10 +155,10 @@ class ProductDetailsFragment : Fragment() {
 
     private fun updateButtonAppearance() {
         if (isItemAddedToCart) {
-            binding.buttonAddToCart.text = "Go To Cart"
+            binding.buttonAddToCart.text = "В корзину"
             binding.buttonAddToCart.setBackgroundResource(R.drawable.black_button)
         } else {
-            binding.buttonAddToCart.text = "Add to Cart"
+            binding.buttonAddToCart.text = "Добавить в корзину"
             binding.buttonAddToCart.setBackgroundResource(R.drawable.green_button)
         }
     }

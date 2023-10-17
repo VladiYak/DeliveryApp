@@ -22,7 +22,7 @@
             android:drawablePadding="10dp"
             android:fontFamily="@font/nexa_regular"
             android:gravity="center_vertical"
-            android:hint="Search Foody"
+            android:hint="@string/search_hint"
             android:paddingStart="@dimen/_12sdp"
             android:singleLine="true"
             android:textSize="@dimen/_12ssp"

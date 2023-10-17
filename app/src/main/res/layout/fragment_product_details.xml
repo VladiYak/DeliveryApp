@@ -36,7 +36,7 @@
                 android:id="@+id/header_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Foody"
+                android:text="@string/food"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_20ssp"
                 android:textStyle="bold" />
@@ -90,7 +90,7 @@
                         android:layout_gravity="center"
                         android:fontFamily="@font/sf_pro_display"
                         android:gravity="center_horizontal"
-                        android:text="Foody"
+                        android:text="@string/food"
                         android:textColor="@color/mainRed"
                         android:textSize="@dimen/_15ssp"
                         android:textStyle="bold" />
@@ -103,7 +103,7 @@
 
                         <RatingBar
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/_35sdp"
+                            android:layout_height="@dimen/_45sdp"
                             android:layout_gravity="center" />
 
                     </LinearLayout>
@@ -161,7 +161,7 @@
                     android:background="@drawable/black_button"
                     android:fontFamily="@font/myfont"
                     android:gravity="center"
-                    android:text="Go To Cart"
+                    android:text="@string/go_to_cart"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textStyle="bold"

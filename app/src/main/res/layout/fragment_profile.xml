@@ -68,7 +68,7 @@
                 android:layout_marginEnd="40dp"
                 android:layout_marginBottom="20dp"
                 android:gravity="center"
-                android:text="User Name"
+                android:text="@string/user_name"
                 android:textColor="#ffff"
                 android:textSize="16sp" />
 
@@ -101,7 +101,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
                 android:gravity="center"
-                android:text="Edit Profile"
+                android:text="@string/edit_profile"
                 android:textColor="#444"
                 android:textSize="12sp" />
         </RelativeLayout>
@@ -143,7 +143,7 @@
                 android:layout_marginBottom="0dp"
                 android:layout_toEndOf="@+id/StImage1"
                 android:gravity="start"
-                android:text="About"
+                android:text="@string/about"
                 android:textColor="#444"
                 android:textSize="14sp" />
 
@@ -157,7 +157,7 @@
                 android:layout_marginBottom="0dp"
                 android:layout_toEndOf="@+id/StImage1"
                 android:gravity="start"
-                android:text="App information"
+                android:text="@string/app_information"
                 android:textColor="#777"
                 android:textSize="14sp" />
         </RelativeLayout>
@@ -197,7 +197,7 @@
                 android:layout_marginBottom="0dp"
                 android:layout_toEndOf="@+id/StImage3"
                 android:gravity="start"
-                android:text="Need Help?"
+                android:text="@string/need_help"
                 android:textColor="#444"
                 android:textSize="14sp" />
 
@@ -211,7 +211,7 @@
                 android:layout_marginBottom="0dp"
                 android:layout_toEndOf="@+id/StImage3"
                 android:gravity="start"
-                android:text="FAQs"
+                android:text="@string/faqs"
                 android:textColor="#777"
                 android:textSize="14sp" />
 
@@ -253,7 +253,7 @@
                 android:layout_marginBottom="0dp"
                 android:layout_toEndOf="@+id/StImage31"
                 android:gravity="start"
-                android:text="Share"
+                android:text="@string/share"
                 android:textColor="#444"
                 android:textSize="14sp" />
 
@@ -267,7 +267,7 @@
                 android:layout_marginBottom="0dp"
                 android:layout_toEndOf="@+id/StImage31"
                 android:gravity="start"
-                android:text="App link share"
+                android:text="@string/app_link_share"
                 android:textColor="#777"
                 android:textSize="14sp" />
 
@@ -308,7 +308,7 @@
                 android:layout_marginBottom="0dp"
                 android:layout_toEndOf="@+id/StImage32"
                 android:gravity="start"
-                android:text="Logout"
+                android:text="@string/logout"
                 android:textColor="#444"
                 android:textSize="14sp" />
 
@@ -322,7 +322,7 @@
                 android:layout_marginBottom="0dp"
                 android:layout_toEndOf="@+id/StImage32"
                 android:gravity="start"
-                android:text="Exit account"
+                android:text="@string/exit_account"
                 android:textColor="#777"
                 android:textSize="14sp" />
 

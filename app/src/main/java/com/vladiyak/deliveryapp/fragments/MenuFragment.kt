@@ -55,28 +55,23 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
         TabLayoutMediator(binding.tabLayout, binding.viewpagerHome) { tab, position ->
             when (position) {
                 0 -> {
-                    tab.text = "Foody"
-                    tab.setIcon(R.drawable.ic_foody)
+                    tab.text = "Главная"
                 }
 
                 1 -> {
-                    tab.text = "Burger"
-                    tab.setIcon(R.drawable.ic_burger)
+                    tab.text = "Бургеры"
                 }
 
                 2 -> {
-                    tab.text = "Pizza"
-                    tab.setIcon(R.drawable.ic_pizza)
+                    tab.text = "Пицца"
                 }
 
                 3 -> {
-                    tab.text = "Fries"
-                    tab.setIcon(R.drawable.ic_fries)
+                    tab.text = "Фрайсы"
                 }
 
                 4 -> {
-                    tab.text = "Pasta"
-                    tab.setIcon(R.drawable.ic_pasta)
+                    tab.text = "Паста"
                 }
             }
         }.attach()

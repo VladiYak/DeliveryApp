@@ -3,23 +3,23 @@
 
     <item
         android:id="@+id/menuFragment"
-        android:title="Menu"
+        android:title="@string/bottom_menu_icon"
         android:icon="@drawable/menupizza"/>
     <item
-        android:id="@+id/specialsFragment"
-        android:title="Specials"
-        android:icon="@drawable/speicals"/>
+        android:id="@+id/searchFragment"
+        android:title="@string/bottom_search_icon"
+        android:icon="@drawable/ic_search"/>
     <item
         android:id="@+id/cartFragment"
-        android:title="Cart"
+        android:title="@string/bottom_cart_icon"
         android:icon="@drawable/ic_bag"/>
     <item
         android:id="@+id/orderHistoryFragment"
-        android:title="Orders"
-        android:icon="@drawable/ic_fav"/>
+        android:title="@string/bottom_orders_icon"
+        android:icon="@drawable/speicals"/>
     <item
         android:id="@+id/profileFragment"
-        android:title="Profile"
+        android:title="@string/bottom_profile_icon"
         android:icon="@drawable/ic_profile"/>
 
 </menu>

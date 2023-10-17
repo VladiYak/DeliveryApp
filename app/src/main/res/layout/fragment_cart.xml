@@ -40,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_20sdp"
                     android:fontFamily="@font/poppins_light"
-                    android:text="My Cart"
+                    android:text="@string/cart"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_14ssp"
                     android:textStyle="bold"
@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_light"
             android:gravity="center"
-            android:text="Your Foody Is Empty"
+            android:text="@string/empty_cart"
             android:textColor="@color/black"
             android:textSize="@dimen/_15ssp"
             android:visibility="gone"
@@ -166,7 +166,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_10sdp"
                         android:layout_weight="1"
-                        android:text="Total:"
+                        android:text="@string/total"
                         android:textColor="#333"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -188,7 +188,7 @@
                         android:background="@drawable/green_button"
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp"
-                        android:text="Checkout"
+                        android:text="@string/checkout"
                         android:textAllCaps="false"
                         android:textColor="#FFF" />
 
