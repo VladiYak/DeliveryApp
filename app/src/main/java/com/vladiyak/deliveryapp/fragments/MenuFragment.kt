@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.tabs.TabLayoutMediator
 import com.noctambulist.foody.fragments.categories.BurgerCategoryFragment
 import com.noctambulist.foody.fragments.categories.FriesCategoryFragment
@@ -18,6 +19,7 @@ import com.vladiyak.deliveryapp.adapters.MenuViewPagerAdapter
 import com.vladiyak.deliveryapp.data.Product
 import com.vladiyak.deliveryapp.databinding.FragmentMenuBinding
 import com.vladiyak.deliveryapp.fragments.categories.MainCategoryFragment
+import com.vladiyak.deliveryapp.utils.hideKeyboard
 
 class MenuFragment : Fragment(R.layout.fragment_menu) {
 
@@ -34,6 +36,8 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        onHomeClick()
 
         binding.searchView.setOnClickListener {
             findNavController().navigate(R.id.action_menuFragment_to_searchFragment)
@@ -94,6 +98,15 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
                 false
             }
         }
+    }
+
+    private fun onHomeClick() {
+        val btm = activity?.findViewById<BottomNavigationView>(R.id.bottomNavMenu)
+        btm?.menu?.getItem(0)?.setOnMenuItemClickListener {
+            activity?.onBackPressed()
+            true
+        }
+        hideKeyboard()
     }
 
     private fun exitApp() {

@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieDrawable
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.vladiyak.deliveryapp.R
 import com.vladiyak.deliveryapp.adapters.PopularNowAdapter
 import com.vladiyak.deliveryapp.adapters.SpecialProductsAdapter
@@ -23,6 +24,7 @@ import com.vladiyak.deliveryapp.adapters.SpicyOfferAdapter
 import com.vladiyak.deliveryapp.databinding.FragmentMainCategoryBinding
 import com.vladiyak.deliveryapp.utils.ItemDecorationVertical
 import com.vladiyak.deliveryapp.utils.Resource
+import com.vladiyak.deliveryapp.utils.hideKeyboard
 import com.vladiyak.deliveryapp.utils.showBottomNavigationView
 import com.vladiyak.deliveryapp.viewmodel.MainCategoryViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -50,6 +52,7 @@ class MainCategoryFragment : Fragment(R.layout.fragment_main_category) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
         setupSpecialProductsRv()
         setupSpicyOfferRv()
@@ -186,6 +189,7 @@ class MainCategoryFragment : Fragment(R.layout.fragment_main_category) {
             adapter = specialProductAdapter
         }
     }
+
 
     override fun onResume() {
         super.onResume()

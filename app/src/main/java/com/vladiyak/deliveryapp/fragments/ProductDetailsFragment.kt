@@ -159,7 +159,7 @@ class ProductDetailsFragment : Fragment() {
             binding.buttonAddToCart.setBackgroundResource(R.drawable.black_button)
         } else {
             binding.buttonAddToCart.text = "Добавить в корзину"
-            binding.buttonAddToCart.setBackgroundResource(R.drawable.green_button)
+            binding.buttonAddToCart.setBackgroundResource(R.drawable.red_button)
         }
     }
 

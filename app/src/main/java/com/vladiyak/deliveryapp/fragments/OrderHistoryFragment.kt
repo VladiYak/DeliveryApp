@@ -1,10 +1,13 @@
 package com.vladiyak.deliveryapp.fragments
 
+import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -18,6 +21,7 @@ import com.vladiyak.deliveryapp.R
 import com.vladiyak.deliveryapp.adapters.OrderHistoryAdapter
 import com.vladiyak.deliveryapp.databinding.FragmentOrderHistoryBinding
 import com.vladiyak.deliveryapp.utils.Resource
+import com.vladiyak.deliveryapp.utils.hideKeyboard
 import com.vladiyak.deliveryapp.utils.showBottomNavigationView
 import com.vladiyak.deliveryapp.viewmodel.OrderHistoryViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -44,6 +48,8 @@ class OrderHistoryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        onHomeClick()
 
         setupOrdersRv()
 
@@ -109,6 +115,15 @@ class OrderHistoryFragment : Fragment() {
         }
     }
 
+    private fun onHomeClick() {
+        val btm = activity?.findViewById<BottomNavigationView>(R.id.bottomNavMenu)
+        btm?.menu?.getItem(0)?.setOnMenuItemClickListener {
+            activity?.onBackPressed()
+            true
+        }
+        hideKeyboard()
+    }
+
     private fun setupOrdersRv() {
         binding.rvAllOrders.apply {
             adapter = ordersAdapter
@@ -120,6 +135,8 @@ class OrderHistoryFragment : Fragment() {
         super.onDestroyView()
         binding.emptyOrder.cancelAnimation()
     }
+
+
 
     override fun onResume() {
         super.onResume()

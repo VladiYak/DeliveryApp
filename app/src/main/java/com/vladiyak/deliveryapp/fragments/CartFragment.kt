@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieDrawable
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.vladiyak.deliveryapp.R
 import com.vladiyak.deliveryapp.adapters.CartProductAdapter
 import com.vladiyak.deliveryapp.data.CartProduct
@@ -22,6 +23,7 @@ import com.vladiyak.deliveryapp.databinding.FragmentCartBinding
 import com.vladiyak.deliveryapp.firebase.FirebaseCommon
 import com.vladiyak.deliveryapp.utils.ItemDecorationVertical
 import com.vladiyak.deliveryapp.utils.Resource
+import com.vladiyak.deliveryapp.utils.hideKeyboard
 import com.vladiyak.deliveryapp.utils.showBottomNavigationView
 import com.vladiyak.deliveryapp.viewmodel.CartViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -44,6 +46,8 @@ class CartFragment : Fragment(R.layout.fragment_cart) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        onHomeClick()
 
         setupCartRv()
 
@@ -206,6 +210,15 @@ class CartFragment : Fragment(R.layout.fragment_cart) {
         }
 
         alertDialog.show()
+    }
+
+    private fun onHomeClick() {
+        val btm = activity?.findViewById<BottomNavigationView>(R.id.bottomNavMenu)
+        btm?.menu?.getItem(0)?.setOnMenuItemClickListener {
+            activity?.onBackPressed()
+            true
+        }
+        hideKeyboard()
     }
 
     private fun deleteCartItem(item: CartProduct) {

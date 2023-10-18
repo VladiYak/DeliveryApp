@@ -1,23 +1,28 @@
 package com.vladiyak.deliveryapp.fragments
 
+import android.app.Activity
 import android.app.AlertDialog
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.vladiyak.deliveryapp.R
 import com.vladiyak.deliveryapp.StartActivity
 import com.vladiyak.deliveryapp.databinding.FragmentProfileBinding
 import com.vladiyak.deliveryapp.utils.Resource
+import com.vladiyak.deliveryapp.utils.hideKeyboard
 import com.vladiyak.deliveryapp.utils.showBottomNavigationView
 import com.vladiyak.deliveryapp.viewmodel.ProfileViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -39,6 +44,8 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        onHomeClick()
 
         onLogoutClick()
 
@@ -145,6 +152,17 @@ class ProfileFragment : Fragment() {
             ).show()
         }
     }
+
+    private fun onHomeClick() {
+        val btm = activity?.findViewById<BottomNavigationView>(R.id.bottomNavMenu)
+        btm?.menu?.getItem(0)?.setOnMenuItemClickListener {
+            activity?.onBackPressed()
+            true
+        }
+        hideKeyboard()
+    }
+
+
 
     override fun onResume() {
         super.onResume()

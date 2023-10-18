@@ -7,6 +7,25 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:918613119680:android:7e7a0a1a48429ed00dd325",
+        "android_client_info": {
+          "package_name": "com.example.productsadder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk_rH6F-JRGQ1eTujPOM5bYWetVZgRcaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:918613119680:android:b57e54c6a63da6970dd325",
         "android_client_info": {
           "package_name": "com.vladiyak.deliveryapp"

@@ -23,7 +23,7 @@ class AddressAdapter() : RecyclerView.Adapter<AddressAdapter.AddressViewHolder>(
                         ContextCompat.getDrawable(itemView.context, R.drawable.black_button)
                 } else {
                     btnAddress.background =
-                        ContextCompat.getDrawable(itemView.context, R.drawable.green_button)
+                        ContextCompat.getDrawable(itemView.context, R.drawable.red_button)
                 }
             }
         }

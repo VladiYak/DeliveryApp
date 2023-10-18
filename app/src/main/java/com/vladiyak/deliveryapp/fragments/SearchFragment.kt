@@ -1,5 +1,6 @@
 package com.vladiyak.deliveryapp.fragments
 
+import android.app.Activity
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
@@ -54,7 +55,6 @@ class SearchFragment : Fragment() {
         onHomeClick()
         setupSearchRecyclerView()
         showKeyboardAutomatically()
-
         searchProducts()
         observeSearch()
         onSearchTextClick()
@@ -66,6 +66,16 @@ class SearchFragment : Fragment() {
             activity?.onBackPressed()
             true
         }
+        hideKeyboard()
+    }
+
+    fun Fragment.hideKeyboard() {
+        view?.let { activity?.hideKeyboard(it) }
+    }
+
+    fun Context.hideKeyboard(view: View) {
+        val inputMethodManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
     }
 
     private fun setupSearchRecyclerView() {

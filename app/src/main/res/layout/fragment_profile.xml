@@ -7,7 +7,7 @@
     android:background="#ffff"
     android:fillViewport="true"
     android:fitsSystemWindows="true"
-    android:paddingBottom="40dp"
+    android:paddingBottom="20dp"
     tools:context=".fragments.ProfileFragment">
 
     <RelativeLayout
@@ -28,51 +28,51 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
+            <RelativeLayout
+                android:id="@+id/imagelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="3dp"
+                tools:layout_editor_absoluteX="-1dp"
+                tools:layout_editor_absoluteY="2dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageUser"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginEnd="0dp"
+                    android:scaleType="centerCrop"
+                    android:src="@color/black"
+                    app:civ_border_color="#FFFFFF"
+                    app:civ_border_width="5dp" />
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageUser"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="@string/user_name"
+                    android:textColor="#ffff"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="500dp"
             android:background="@drawable/half_circle" />
-
-        <RelativeLayout
-            android:id="@+id/imagelayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="2dp"
-            android:gravity="center"
-            android:paddingTop="3dp">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/imageUser"
-                android:layout_width="105dp"
-                android:layout_height="105dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="55dp"
-                android:layout_marginEnd="0dp"
-                android:scaleType="centerCrop"
-                android:src="@color/black"
-                app:civ_border_color="#FFFFFF"
-                app:civ_border_width="5dp" />
-
-            <TextView
-                android:id="@+id/tvUserName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/imageUser"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="45dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="40dp"
-                android:layout_marginBottom="20dp"
-                android:gravity="center"
-                android:text="@string/user_name"
-                android:textColor="#ffff"
-                android:textSize="16sp" />
-
-        </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/circleLayouts"

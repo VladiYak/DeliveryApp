@@ -134,7 +134,7 @@ class BillingFragment : Fragment() {
             if (selectedAddress == null) {
                 Toast.makeText(
                     requireContext(),
-                    "Please provide your address before placing an order.",
+                    "Пожалуйста укажите адрес перед оформлением заказа.",
                     Toast.LENGTH_SHORT
                 ).show()
                 return@setOnClickListener
@@ -152,10 +152,10 @@ class BillingFragment : Fragment() {
         val message = view.findViewById<TextView>(R.id.tv_delete_message)
         val btnConfirm = view.findViewById<Button>(R.id.btn_yes)
         val btnCancel = view.findViewById<Button>(R.id.btn_no)
-        title.text = "Confirmation"
-        message.text = "Are you sure you want to place this order?"
-        btnConfirm.text = "Confirm"
-        btnCancel.text = "Cancel"
+        title.text = "Подтверждение"
+        message.text = "Вы уверены что хотите оформить заказ?"
+        btnConfirm.text = "Подтвердить"
+        btnCancel.text = "Отмена"
 
         btnConfirm.setOnClickListener {
             val order = Order(
