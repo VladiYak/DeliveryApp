@@ -27,7 +27,7 @@ class OrderViewModel @Inject constructor(
         }
         firestore.runBatch { batch ->
             firestore.collection("user")
-                .document(auth.uid!!)
+                .document(auth.uid ?: "")
                 .collection("orders")
                 .document()
                 .set(order)
@@ -35,7 +35,7 @@ class OrderViewModel @Inject constructor(
             firestore.collection("orders").document().set(order)
 
             firestore.collection("user")
-                .document(auth.uid!!)
+                .document(auth.uid ?: "")
                 .collection("cart")
                 .get()
                 .addOnSuccessListener {
