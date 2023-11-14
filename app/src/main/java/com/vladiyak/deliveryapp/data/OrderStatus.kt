@@ -1,33 +1,33 @@
 package com.vladiyak.deliveryapp.data
 
 sealed class OrderStatus(val status: String) {
-    object Ordered : OrderStatus("Ordered")
-    object Canceled : OrderStatus("Canceled")
-    object Confirmed : OrderStatus("Confirmed")
-    object Shipped : OrderStatus("Shipped")
-    object Delivered : OrderStatus("Delivered")
-    object Returned : OrderStatus("Returned")
+    object Ordered : OrderStatus("Заказ оформлен")
+    object Canceled : OrderStatus("Отменен")
+    object Confirmed : OrderStatus("Подтвержден")
+    object Shipped : OrderStatus("Отправлен")
+    object Delivered : OrderStatus("Доставлен")
+    object Returned : OrderStatus("Возвращен")
 }
 
 fun getOrderStatus(status: String): OrderStatus {
     return when (status) {
-        "Ordered" -> {
+        "Заказ оформлен" -> {
             OrderStatus.Ordered
         }
 
-        "Canceled" -> {
+        "Отменен" -> {
             OrderStatus.Canceled
         }
 
-        "Confirmed" -> {
+        "Подтвержден" -> {
             OrderStatus.Confirmed
         }
 
-        "Shipped" -> {
+        "Отправлен" -> {
             OrderStatus.Shipped
         }
 
-        "Delivered" -> {
+        "Доставлен" -> {
             OrderStatus.Delivered
         }
 

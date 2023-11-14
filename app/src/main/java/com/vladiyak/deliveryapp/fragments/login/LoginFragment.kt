@@ -14,7 +14,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.vladiyak.deliveryapp.MainActivity
 import com.vladiyak.deliveryapp.R
 import com.vladiyak.deliveryapp.databinding.FragmentLoginBinding
-import com.vladiyak.deliveryapp.dialog.setupBottomSheetDialog
+import com.vladiyak.deliveryapp.utils.setupBottomSheetDialog
 import com.vladiyak.deliveryapp.utils.Resource
 import com.vladiyak.deliveryapp.viewmodel.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint

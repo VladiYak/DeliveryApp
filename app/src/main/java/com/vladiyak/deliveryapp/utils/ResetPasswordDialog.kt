@@ -1,4 +1,4 @@
-package com.vladiyak.deliveryapp.dialog
+package com.vladiyak.deliveryapp.utils
 
 import android.widget.Button
 import android.widget.EditText

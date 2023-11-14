@@ -22,7 +22,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.vladiyak.deliveryapp.R
 import com.vladiyak.deliveryapp.data.User
 import com.vladiyak.deliveryapp.databinding.FragmentUserAccountBinding
-import com.vladiyak.deliveryapp.dialog.setupBottomSheetDialog
+import com.vladiyak.deliveryapp.utils.setupBottomSheetDialog
 import com.vladiyak.deliveryapp.utils.Resource
 import com.vladiyak.deliveryapp.viewmodel.UserAccountViewModel
 import dagger.hilt.android.AndroidEntryPoint

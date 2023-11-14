@@ -51,7 +51,7 @@ class OrderDetailsFragment : Fragment() {
         }
 
         binding.apply {
-            tvOrderId.text = "Order #${order.orderId}"
+            tvOrderId.text = "Заказ #${order.orderId}"
             stepView.setSteps(
                 mutableListOf(
                     OrderStatus.Ordered.status,

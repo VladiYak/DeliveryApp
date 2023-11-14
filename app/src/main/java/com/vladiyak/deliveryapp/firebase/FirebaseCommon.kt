@@ -7,9 +7,10 @@ import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import javax.inject.Inject
 
 
-class FirebaseCommon(
+class FirebaseCommon @Inject constructor(
     private val firestore: FirebaseFirestore,
     private val auth: FirebaseAuth,
     private val productsCollection: CollectionReference = Firebase.firestore.collection(
@@ -17,7 +18,7 @@ class FirebaseCommon(
     )
 ) {
     private val cartCollection =
-        firestore.collection("user").document(auth.uid!!).collection("cart")
+        firestore.collection("user").document(auth.uid ?: "").collection("cart")
 
     fun addProductToCart(cartProduct: CartProduct, onResult: (CartProduct?, Exception?) -> Unit) {
         cartCollection.document().set(cartProduct)

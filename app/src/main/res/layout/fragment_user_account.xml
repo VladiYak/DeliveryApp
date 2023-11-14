@@ -34,8 +34,7 @@
                 <ImageView
                     android:id="@+id/imageCloseUserAccount"
                     android:layout_width="@dimen/_20sdp"
-                    android:layout_height="@dimen/_25sdp"
-                    android:scaleType="centerInside"
+                    android:layout_height="@dimen/_20sdp"
                     android:src="@drawable/ic_arrow_back"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -45,14 +44,15 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="3dp"
                     android:fontFamily="@font/poppins_light"
                     android:text="@string/my_account"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_16ssp"
-                    app:layout_constraintBottom_toBottomOf="@id/imageCloseUserAccount"
-                    app:layout_constraintStart_toStartOf="@id/imageCloseUserAccount"
-                    app:layout_constraintTop_toTopOf="@id/imageCloseUserAccount" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imageCloseUserAccount"
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
