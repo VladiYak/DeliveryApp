@@ -1,47 +1,68 @@
-package com.vladiyak.deliveryapp
+package com.vladiyak.deliveryapp.fragments
 
 import android.app.Activity
 import android.content.Intent
-import android.content.Intent.ACTION_GET_CONTENT
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
 import com.vladiyak.deliveryapp.data.Product
-import com.vladiyak.deliveryapp.databinding.ProductsAdderLayoutBinding
+import com.vladiyak.deliveryapp.databinding.FragmentProductAdderBinding
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import java.io.ByteArrayOutputStream
 import java.util.UUID
 
-//Change the security access settings in the firebase cloud and firestore
-class ProductsAdder : AppCompatActivity() {
-    private val binding by lazy { ProductsAdderLayoutBinding.inflate(layoutInflater) }
+
+class ProductAdderFragment : Fragment() {
+
+    private var _binding: FragmentProductAdderBinding? = null
+    private val binding get() = _binding!!
+
     var selectedImages = mutableListOf<Uri>()
     val firestore = Firebase.firestore
 
     private val storage = Firebase.storage.reference
 
 
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentProductAdderBinding.inflate(inflater, container, false)
 
+        return binding.root
+    }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(binding.root)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         firestore.firestoreSettings.isSslEnabled
+
+        binding.fab.setOnClickListener {
+            val productValidation = validateInformation()
+            if (!productValidation) {
+                Toast.makeText(requireContext(), "Check your inputs", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            saveProducts() {
+                Log.d("test", it.toString())
+            }
+        }
 
 
         val selectImagesActivityResult =
@@ -67,34 +88,13 @@ class ProductsAdder : AppCompatActivity() {
             }
         //6
         binding.buttonImagesPicker.setOnClickListener {
-            val intent = Intent(ACTION_GET_CONTENT)
+            val intent = Intent(Intent.ACTION_GET_CONTENT)
             intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
             intent.type = "image/*"
             selectImagesActivityResult.launch(intent)
         }
 
 
-    }
-
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.toolbar_menu, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        //1
-        if (item.itemId == R.id.saveProduct) {
-            val productValidation = validateInformation()
-            if (!productValidation) {
-                Toast.makeText(this, "Check your inputs", Toast.LENGTH_SHORT).show()
-                return false
-            }
-            saveProducts() {
-                Log.d("test", it.toString())
-            }
-        }
-        return super.onOptionsItemSelected(item)
     }
 
     //2
@@ -112,7 +112,6 @@ class ProductsAdder : AppCompatActivity() {
 
     //3
     private fun saveProducts(state: (Boolean) -> Unit) {
-        val sizes = getSizesList(binding.edSizes.text.toString().trim())
         val imagesByteArrays = getImagesByteArrays() //7
         val name = binding.edName.text.toString().trim()
         val images = mutableListOf<String>()
@@ -177,6 +176,7 @@ class ProductsAdder : AppCompatActivity() {
         val imagesByteArray = mutableListOf<ByteArray>()
         selectedImages.forEach {
             val stream = ByteArrayOutputStream()
+            val contentResolver = requireActivity().contentResolver
             val imageBmp = MediaStore.Images.Media.getBitmap(contentResolver, it)
             if (imageBmp.compress(Bitmap.CompressFormat.JPEG, 85, stream)) {
                 val imageAsByteArray = stream.toByteArray()
@@ -186,16 +186,13 @@ class ProductsAdder : AppCompatActivity() {
         return imagesByteArray
     }
 
-    private fun getSizesList(sizes: String): List<String>? {
-        if (sizes.isEmpty())
-            return null
-        val sizesList = sizes.split(",").map { it.trim() }
-        return sizesList
-    }
-
     private fun updateImages() {
         binding.tvSelectedImages.setText(selectedImages.size.toString())
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 
 }

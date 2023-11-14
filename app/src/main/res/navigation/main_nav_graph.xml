@@ -39,8 +39,8 @@
             android:id="@+id/action_profileFragment_to_menuFragment"
             app:destination="@id/menuFragment" />
         <action
-            android:id="@+id/action_profileFragment_to_helpFragment"
-            app:destination="@id/helpFragment" />
+            android:id="@+id/action_profileFragment_to_productAdderFragment"
+            app:destination="@id/productAdderFragment" />
         <action
             android:id="@+id/action_profileFragment_to_aboutFragment"
             app:destination="@id/aboutFragment" />
@@ -155,10 +155,10 @@
             app:argType="com.vladiyak.deliveryapp.data.Order" />
     </fragment>
     <fragment
-        android:id="@+id/helpFragment"
-        android:name="com.vladiyak.deliveryapp.fragments.HelpFragment"
-        android:label="HelpFragment"
-        tools:layout="@layout/fragment_help"/>
+        android:id="@+id/productAdderFragment"
+        android:name="com.vladiyak.deliveryapp.fragments.ProductAdderFragment"
+        android:label="ProductAdderFragment"
+        tools:layout="@layout/fragment_product_adder" />
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.vladiyak.deliveryapp.fragments.AboutFragment"

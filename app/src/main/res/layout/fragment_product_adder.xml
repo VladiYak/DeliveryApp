@@ -11,15 +11,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_20sdp"
+            android:src="@drawable/baseline_add_24"
+            app:elevation="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:pressedTranslationZ="12dp" />
+
         <ProgressBar
             android:id="@+id/progressbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:visibility="invisible"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/productsInfo"
@@ -36,7 +47,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Product general information:"
+                android:text="@string/product_information"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -46,33 +57,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Name" />
+                android:hint="@string/user_name" />
 
 
             <EditText
                 android:id="@+id/edCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Category" />
+                android:hint="@string/category" />
 
             <EditText
                 android:id="@+id/edDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Product description (Optional)" />
+                android:hint="@string/description" />
 
             <EditText
                 android:id="@+id/edPrice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Price"
+                android:hint="@string/price"
                 android:inputType="numberDecimal" />
 
             <EditText
                 android:id="@+id/edOfferPercentage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Offer Percentage (Optional)"
+                android:hint="@string/offer_percentage"
                 android:inputType="numberDecimal" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -81,72 +92,26 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="@id/productsInfo"
             app:layout_constraintStart_toStartOf="@id/productsInfo"
             app:layout_constraintTop_toBottomOf="@id/productsInfo">
 
+            <Button
+                android:id="@+id/buttonImagesPicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/images"
+                android:textSize="14sp" />
+
             <TextView
+                android:id="@+id/tvSelectedImages"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Product details:"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/edSizes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Sizes (Optional) | use , between each new size"
-                android:inputType="text" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/buttonColorPicker"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Colors"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/tvSelectedColors"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="20dp"
-                    android:gravity="center"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/buttonImagesPicker"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Images"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/tvSelectedImages"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="20dp"
-                    android:gravity="center"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:textSize="14sp" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -73,4 +73,12 @@
     <string name="resetpassword">Сброс пароля</string>
     <string name="we_will_send_you_the_password_link_to_your_email">Мы отправим ссылку на пароль на ваш email</string>
     <string name="send">Отправить</string>
+    <string name="product_information">Информация о продукте:</string>
+    <string name="category">Категория</string>
+    <string name="description">Описание</string>
+    <string name="price">Цена</string>
+    <string name="offer_percentage">Процент предложения</string>
+    <string name="images">Изображения</string>
+    <string name="menu">Меню</string>
+    <string name="add_products">Добавить позиции в меню</string>
 </resources>

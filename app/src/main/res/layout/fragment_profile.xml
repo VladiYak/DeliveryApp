@@ -186,7 +186,7 @@
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="10dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ic_help_outline" />
+                android:src="@drawable/ic_pasta" />
 
             <TextView
                 android:id="@+id/St_3"
@@ -197,7 +197,7 @@
                 android:layout_marginBottom="0dp"
                 android:layout_toEndOf="@+id/StImage3"
                 android:gravity="start"
-                android:text="@string/need_help"
+                android:text="@string/menu"
                 android:textColor="#444"
                 android:textSize="14sp" />
 
@@ -211,7 +211,7 @@
                 android:layout_marginBottom="0dp"
                 android:layout_toEndOf="@+id/StImage3"
                 android:gravity="start"
-                android:text="@string/faqs"
+                android:text="@string/add_products"
                 android:textColor="#777"
                 android:textSize="14sp" />
 

@@ -69,6 +69,7 @@ dependencies {
     implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
     implementation("com.google.firebase:firebase-messaging:23.3.1")
     implementation("com.github.skydoves:colorpickerview:2.2.4")
+    implementation("androidx.activity:activity-ktx:1.6.1")
 
 
 
