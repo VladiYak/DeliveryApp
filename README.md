@@ -4,7 +4,7 @@
 Delivery app designed to provide users with a convenient way to order fast food meals
 
 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+![Logo](https://github.com/VladiYak95/DeliveryApp/blob/master/app/src/main/res/drawable/welcome5.png)
 
 
 ## Features
@@ -33,5 +33,20 @@ Delivery app designed to provide users with a convenient way to order fast food 
 - Kotlin Coroutines: Handles background tasks and asynchronous programming.
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+<p float="left">
+  <img src="https://github.com/VladiYak95/DeliveryApp/blob/master/metadata/images/phoneScreenshots/Screenshot_20231115-173326_DeliveryApp.jpg" width="25%" margin-top=10px" />
+  <img src="https://github.com/VladiYak95/DeliveryApp/blob/master/metadata/images/phoneScreenshots/Screenshot_20231115-173408_DeliveryApp.jpg" width="25%" margin-top=50px"/>
+  <img src="https://github.com/VladiYak95/DeliveryApp/blob/master/metadata/images/phoneScreenshots/Screenshot_20231115-173420_DeliveryApp.jpg" width="25%" />
+  <img src="https://github.com/VladiYak95/DeliveryApp/blob/master/metadata/images/phoneScreenshots/Screenshot_20231115-173456_DeliveryApp.jpg" width="25%" />
+  <img src="https://github.com/VladiYak95/DeliveryApp/blob/master/metadata/images/phoneScreenshots/Screenshot_20231115-173505_DeliveryApp.jpg" width="25%" />
+  <img src="https://github.com/VladiYak95/DeliveryApp/blob/master/metadata/images/phoneScreenshots/Screenshot_20231115-173517_DeliveryApp.jpg" width="25%" />
+  <img src="https://github.com/VladiYak95/DeliveryApp/blob/master/metadata/images/phoneScreenshots/Screenshot_20231115-173517_DeliveryApp.jpg" width="25%" />
+  <img src="https://github.com/VladiYak95/DeliveryApp/blob/master/metadata/images/phoneScreenshots/Screenshot_20231115-173527_DeliveryApp.jpg" width="25%" />
+  <img src="https://github.com/VladiYak95/DeliveryApp/blob/master/metadata/images/phoneScreenshots/Screenshot_20231115-173638_DeliveryApp.jpg" width="25%" />
+  <img src="https://github.com/VladiYak95/DeliveryApp/blob/master/metadata/images/phoneScreenshots/Screenshot_20231115-173757_DeliveryApp.jpg" width="25%" />
+  <img src="https://github.com/VladiYak95/DeliveryApp/blob/master/metadata/images/phoneScreenshots/Screenshot_20231115-173952_DeliveryApp.jpg" width="25%" />
+  <img src="https://github.com/VladiYak95/DeliveryApp/blob/master/metadata/images/phoneScreenshots/Screenshot_20231115-174135_DeliveryApp.jpg" width="25%" />
+  <img src="https://github.com/VladiYak95/DeliveryApp/blob/master/metadata/images/phoneScreenshots/Screenshot_20231115-174242_DeliveryApp.jpg" width="25%" />
+  <img src="https://github.com/VladiYak95/DeliveryApp/blob/master/metadata/images/phoneScreenshots/Screenshot_20231115-174338_DeliveryApp.jpg" width="25%" />
+</p>
 
