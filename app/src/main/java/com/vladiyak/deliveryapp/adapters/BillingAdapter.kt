@@ -22,8 +22,9 @@ class BillingAdapter : RecyclerView.Adapter<BillingAdapter.BillingViewHolder>() 
                     .error(R.drawable.ic_broken_image)
                     .into(imageCartProduct)
                 tvProductCartName.text = billing.product.name
-                val formattedPrice = String.format("TK. %.1f", billing.product.offerPercentage)
+                val formattedPrice = String.format("$%.1f", billing.product.offerPercentage)
                 tvProductCartPrice.text = formattedPrice
+                tvBillingProductQuantity.text = billing.quantity.toString()
             }
         }
     }

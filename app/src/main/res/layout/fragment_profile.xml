@@ -26,7 +26,8 @@
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <RelativeLayout
                 android:id="@+id/imagelayout"
@@ -186,7 +187,7 @@
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="10dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ic_pasta" />
+                android:src="@drawable/ic_pizza" />
 
             <TextView
                 android:id="@+id/St_3"
@@ -296,8 +297,7 @@
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="10dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ic_logout"
-                app:tint="@color/text_color" />
+                android:src="@drawable/ic_logout" />
 
             <TextView
                 android:id="@+id/St_32"

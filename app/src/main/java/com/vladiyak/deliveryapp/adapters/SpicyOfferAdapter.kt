@@ -26,13 +26,13 @@ class SpicyOfferAdapter : RecyclerView.Adapter<SpicyOfferAdapter.SpicyOfferViewH
                     .into(imgSpicyOffer)
 
                 val formattedNewPrice = String.format(
-                    "TK. %.1f",
+                    "$%.1f",
                     product.offerPercentage
                 ) // Assuming you have a field for the new price in your Product model
                 tvNewPrice.text = formattedNewPrice
 
                 tvOldPrice.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
-                val formattedOldPrice = String.format("TK. %.1f", product.price)
+                val formattedOldPrice = String.format("$%.1f", product.price)
                 tvOldPrice.text = formattedOldPrice
 
                 tvSpicyOfferName.text = product.name

@@ -16,7 +16,7 @@
         <ImageView
             android:id="@+id/ivSpecialRvItem"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_90sdp"
+            android:layout_height="@dimen/_100sdp"
             android:scaleType="centerCrop"
             android:src="@drawable/account_bg"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +30,7 @@
             android:layout_marginTop="@dimen/_3sdp"
             android:background="@color/accent"
             android:fontFamily="@font/poppins_thin"
-            android:text="TK. 00.00"
+            android:text="$0.0"
             android:textColor="@color/white"
             android:textSize="@dimen/_8ssp"
             app:layout_constraintStart_toStartOf="parent"

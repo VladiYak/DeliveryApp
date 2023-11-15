@@ -124,7 +124,7 @@ class BillingFragment : Fragment() {
         }
 
         billingAdapter.differ.submitList(products)
-        binding.tvTotalPrice.text = "TK. $totalPrice"
+        binding.tvTotalPrice.text = "$$totalPrice"
 
         addressAdapter.onClick = {
             selectedAddress = it

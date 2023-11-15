@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/popularNowCard"
-    android:layout_width="@dimen/_120sdp"
-    android:layout_height="@dimen/_180sdp"
+    android:layout_width="@dimen/_150sdp"
+    android:layout_height="@dimen/_200sdp"
     android:background="@color/g_card_background"
     android:clickable="true"
     app:cardCornerRadius="@dimen/_10sdp"
@@ -18,8 +18,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardPopular"
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_80sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_100sdp"
             app:cardCornerRadius="@dimen/_10sdp"
             app:cardElevation="@dimen/_10sdp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -89,11 +89,10 @@
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginBottom="@dimen/_15sdp"
             android:fontFamily="@font/sf_pro_display"
-            android:text="TK. 00.0"
+            android:text="$0.0"
             android:textColor="@color/black"
             android:textSize="@dimen/_10ssp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/tv_price"
             app:layout_constraintTop_toBottomOf="@+id/cardPopular" />
 
@@ -103,7 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/_15sdp"
             android:fontFamily="@font/sf_pro_display"
-            android:text="Tk. 00.0"
+            android:text="$0.0"
             android:textColor="@color/gray"
             android:textSize="@dimen/_10ssp"
             app:layout_constraintBottom_toBottomOf="parent"

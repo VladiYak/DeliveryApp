@@ -33,12 +33,12 @@ class MainActivity : AppCompatActivity() {
 
 
         lifecycleScope.launchWhenCreated { println(FirebaseMessaging.getInstance().token.await()) }
-        FirebaseInstallations.getInstance().getToken(true).addOnCompleteListener {
-            // get token
-            val token = it.result.token
-            Log.d("Tokennn", token)
-
-        }
+//        FirebaseInstallations.getInstance().getToken(true).addOnCompleteListener {
+//            // get token
+//            val token = it.result.token
+//            Log.d("Tokennn", token)
+//
+//        }
 
         val navHostFragment = supportFragmentManager.findFragmentById(
             R.id.shoppingHostFragment

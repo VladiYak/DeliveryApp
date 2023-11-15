@@ -24,13 +24,13 @@ class PopularNowAdapter : RecyclerView.Adapter<PopularNowAdapter.PopularNowViewH
                     .into(imgProduct)
 
                 val formattedNewPrice = if (product.offerPercentage != null) {
-                    String.format("TK. %.1f", product.offerPercentage)
+                    String.format("$%.1f", product.offerPercentage)
                 } else {
                     ""
                 }
                 tvNewPrice.text = formattedNewPrice
                 tvPrice.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
-                tvPrice.text = "TK. ${product.price}"
+                tvPrice.text = "$${product.price}"
                 tvName.text = product.name
             }
         }

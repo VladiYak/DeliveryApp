@@ -24,7 +24,7 @@ class CartProductAdapter : RecyclerView.Adapter<CartProductAdapter.CartProductVi
                 tvCartProductName.text = cartProduct.product.name
                 tvQuantity.text = cartProduct.quantity.toString()
 
-                val formattedPrice = String.format("TK. %.1f", cartProduct.product.offerPercentage)
+                val formattedPrice = String.format("$%.1f", cartProduct.product.offerPercentage)
                 tvProductCartPrice.text = formattedPrice
             }
             binding.deleteItemFromCart.setOnClickListener {

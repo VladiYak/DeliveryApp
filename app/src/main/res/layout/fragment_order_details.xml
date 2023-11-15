@@ -218,7 +218,7 @@
                 android:layout_marginBottom="@dimen/_14sdp"
                 android:fontFamily="@font/sf_pro_display"
                 android:paddingTop="@dimen/_10sdp"
-                android:text="00.0 TK"
+                android:text="$0.0"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_12ssp"
                 app:layout_constraintBottom_toBottomOf="parent"

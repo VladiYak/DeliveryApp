@@ -53,15 +53,11 @@ class ProfileFragment : Fragment() {
         binding.needHelpLayout.setOnClickListener {
             findNavController().navigate(R.id.action_profileFragment_to_productAdderFragment)
         }
-//
+
         binding.constraintProfile.setOnClickListener {
             findNavController().navigate(R.id.action_profileFragment_to_userAccountFragment)
         }
-//
-//        binding.linearAllOrders.setOnClickListener {
-//            findNavController().navigate(R.id.action_profileFragment_to_allOrdersFragment)
-//        }
-//
+
         binding.linearAbout.setOnClickListener {
             findNavController().navigate(R.id.action_profileFragment_to_aboutFragment)
         }

@@ -107,7 +107,7 @@ class MainCategoryViewModel @Inject constructor(
         search.postValue(Resource.Loading())
         firebaseDatabase.searchProducts(searchQuery).addOnCompleteListener {
             if (it.isSuccessful) {
-                val productsList = it.result!!.toObjects(Product::class.java)
+                val productsList = it.result.toObjects(Product::class.java)
                 Log.d(ContentValues.TAG, "Search successful. Found ${productsList.size} products.")
                 search.postValue(Resource.Success(productsList))
             } else {

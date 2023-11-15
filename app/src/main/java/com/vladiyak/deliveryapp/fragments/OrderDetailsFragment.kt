@@ -74,7 +74,7 @@ class OrderDetailsFragment : Fragment() {
             tvFullName.text = order.address?.fullName
             tvAddress.text = "${order.address?.area} ${order.address?.city}"
             tvPhoneNumber.text = order.address?.phone
-            tvTotalPrice.text = "TK. ${order.totalPrice}"
+            tvTotalPrice.text = "$${order.totalPrice}"
         }
         billingAdapter.differ.submitList(order.product)
     }

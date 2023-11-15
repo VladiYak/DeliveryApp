@@ -100,7 +100,7 @@ class ProductDetailsFragment : Fragment() {
 
                     is Resource.Success -> {
                         binding.buttonAddToCart
-                        Toast.makeText(requireContext(), "Food added", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(requireContext(), "Блюдо добавлено", Toast.LENGTH_SHORT).show()
                         updateButtonAppearance()
                     }
 
@@ -118,7 +118,7 @@ class ProductDetailsFragment : Fragment() {
         binding.apply {
             tvProdcutName.text = product.name
             headerTitle.text = product.name
-            tvProdcutPrice.text = "TK. ${product.offerPercentage}"
+            tvProdcutPrice.text = "$${product.offerPercentage}"
             val typewriterDelay = 50L
             product.description?.let {
                 applyTypewriterEffect(

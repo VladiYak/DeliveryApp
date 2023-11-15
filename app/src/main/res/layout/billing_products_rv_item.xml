@@ -49,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_light"
-            android:text="Tk. 50"
+            android:text="$50"
             android:textColor="@color/black"
             android:textSize="10sp"
             android:textStyle="bold"
@@ -69,11 +69,11 @@
             android:id="@+id/tvBillingProductQuantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_2sdp"
             android:text="@string/_1"
             android:textSize="@dimen/_8ssp"
             app:layout_constraintBottom_toBottomOf="@+id/tvBillingQuantity"
-            app:layout_constraintStart_toStartOf="@id/tvBillingQuantity"
+            app:layout_constraintStart_toEndOf="@id/tvBillingQuantity"
             app:layout_constraintTop_toTopOf="@+id/tvBillingQuantity" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

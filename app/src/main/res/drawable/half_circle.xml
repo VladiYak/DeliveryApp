@@ -33,8 +33,8 @@
             android:shape="oval">
             <gradient
                 android:angle="90"
-                android:endColor="#FFFBFB"
-                android:startColor="#919191"
+                android:endColor="@color/text_color"
+                android:startColor="@color/text_color"
                 android:type="linear" />
         </shape>
     </item>

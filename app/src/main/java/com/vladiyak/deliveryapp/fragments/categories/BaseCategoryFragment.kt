@@ -92,7 +92,7 @@ open class BaseCategoryFragment : Fragment(R.layout.fragment_base_category) {
     private fun setupPopularNowRv() {
         binding.rvPopularNow.apply {
             layoutManager =
-                GridLayoutManager(requireActivity(), 2, GridLayoutManager.VERTICAL, false)
+                GridLayoutManager(requireActivity(), 3, GridLayoutManager.VERTICAL, false)
             adapter = popularNowAdapter
         }
     }

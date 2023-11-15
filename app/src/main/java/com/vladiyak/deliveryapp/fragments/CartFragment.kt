@@ -60,7 +60,7 @@ class CartFragment : Fragment(R.layout.fragment_cart) {
                 if (price != null) {
                     totalPrice = price
                 }
-                binding.tvTotalprice.text = "TK. ${String.format("%.1f", totalPrice)}"
+                binding.tvTotalprice.text = "$${String.format("%.1f", totalPrice)}"
             }
         }
 
